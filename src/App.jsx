@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setLocale } from './store/localeSlice';
+import { fetchProducts } from './store/productsSlice';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import CartDrawer from './components/CartDrawer';
@@ -23,6 +24,7 @@ function App() {
     // Bootstrap initial language
     const currentLocale = localStorage.getItem('locale') || 'en';
     dispatch(setLocale(currentLocale));
+    dispatch(fetchProducts());
   }, [dispatch]);
 
   return (
