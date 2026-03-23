@@ -1,0 +1,122 @@
+.footer {
+  padding: 24px 0; /* Standardized 24px top/bottom */
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 24px; 
+  margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand .logo-text {
+  font-size: 18px; 
+  margin-bottom: 8px;
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footer-desc {
+  color: var(--text-secondary);
+  font-size: 13px; /* Refined to 13px */
+  line-height: 1.6;
+}
+
+.footer h3 {
+  font-family: var(--font-body);
+  font-size: 13px; 
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px; 
+}
+
+.footer-link-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Standardized gap between icon and text */
+  color: var(--text-secondary);
+  font-size: 13px; /* Refined to 13px */
+  transition: color var(--transition-fast);
+}
+
+.footer-link-icon:hover {
+  color: var(--accent);
+}
+
+.footer-newsletter p {
+  color: var(--text-secondary);
+  font-size: 13px; /* Refined to 13px */
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px; 
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px; /* Refined to 13px */
+}
+
+/* Vertical Social Links */
+.social-links-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.social-icon-vertical {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-vertical:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .social-icon-vertical:hover {
+  transform: translateX(-4px);
+}
+
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 16px; }

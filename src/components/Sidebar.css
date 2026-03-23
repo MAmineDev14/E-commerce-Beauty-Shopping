@@ -1,0 +1,181 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  z-index: 200;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  overflow-y: hidden;
+  background: var(--surface);
+  backdrop-filter: var(--surface-blur);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border-right: 1px solid var(--border);
+}
+
+[dir="rtl"] .sidebar {
+  left: auto;
+  right: -280px;
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
+.sidebar.open {
+  transform: translateX(280px);
+}
+
+[dir="rtl"] .sidebar.open {
+  transform: translateX(-280px);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+  z-index: 199;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  min-height: 56px;
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Standardized to 12px */
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  font-size: 14px; /* Refined to 14px (Amazon Style) */
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-radius: var(--border-radius-sm);
+  width: 100%;
+  text-align: left;
+}
+
+[dir="rtl"] .nav-item {
+  text-align: right;
+}
+
+.nav-item:hover {
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+.nav-item.active {
+  background-color: var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-item svg {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.nav-item:hover svg,
+.nav-item.active svg {
+  color: var(--accent);
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 12px 12px;
+}
+
+.sidebar-footer {
+  padding: 16px 12px 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05); /* Subtle lift */
+}
+
+.logout-btn {
+  color: var(--error);
+}
+
+.logout-btn:hover {
+  background-color: rgba(229, 115, 115, 0.1);
+  color: var(--error);
+}
+
+.logout-btn svg {
+  color: var(--error);
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 14px; /* Slightly larger */
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .nav-item svg {
+  /* No flipping needed for these specific icons usually, 
+     but flip ArrowLeft if it were here. 
+     Home, Shop, User, Settings are symmetrical enough. */
+}

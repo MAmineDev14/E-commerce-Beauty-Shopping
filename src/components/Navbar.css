@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0; /* Standardized 16px top/bottom */
+  z-index: 100;
+  transition: all var(--transition-base);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 13px; /* Slightly smaller logo */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Increased to accommodate 24px icons */
+  height: 40px;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.icon-btn:hover {
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Increased slightly for lang switcher */
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+  margin-right: 8px;
+}
+
+[dir="rtl"] .lang-switcher {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.lang-select {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  padding: 4px 0;
+}
+
+.lang-select:hover {
+  color: var(--accent);
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent);
+  color: white;
+  font-size: 9px;
+  font-weight: 600;
+  height: 14px;
+  min-width: 14px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+[dir="rtl"] .cart-badge {
+  right: auto;
+  left: 0;
+}
+
+.search-overlay {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  z-index: 99;
+  border-bottom: 1px solid var(--border);
+}

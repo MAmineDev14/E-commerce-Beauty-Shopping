@@ -1,0 +1,92 @@
+.account-page {
+  padding-top: 32px; /* Standardized to 32px */
+  padding-bottom: 32px;
+}
+
+.account-container {
+  max-width: 600px; 
+  margin: 0 auto;
+  padding: 16px; /* Standardized to 16px */
+  border-radius: 8px; /* Standardized to 8px */
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px; /* Reduced from 24px */
+}
+
+.account-header h2 {
+  font-size: 24px; /* Standardized to H3 */
+  margin: 0;
+  font-weight: 600;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px; /* Reduced from 24px */
+}
+
+.detail-label {
+  font-size: 11px; /* Reduced from 13px */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 2px; /* Reduced from 4px */
+}
+
+.detail-value {
+  font-size: 14px; /* Refined to 14px */
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px; /* Reduced from 12px */
+}
+
+.account-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: 24px 0; /* Reduced from 40px */
+}
+
+.account-danger-zone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.danger-text h3 {
+  font-size: 14px; /* Reduced from 18px */
+  margin-bottom: 2px;
+  color: var(--error);
+}
+
+.danger-text p {
+  font-size: 12px; /* Reduced from 14px */
+  color: var(--text-secondary);
+}
+
+.btn-danger {
+  color: var(--error);
+  border-color: var(--error);
+}
+
+.btn-danger:hover {
+  background-color: var(--error);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .account-danger-zone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

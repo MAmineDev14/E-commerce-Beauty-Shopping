@@ -1,0 +1,99 @@
+.search-bar-container {
+  padding: 0 16px; /* Reduced from 24px */
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px; /* Reduced from 16px */
+}
+
+.search-title {
+  font-size: 14px; /* Reduced from 18px */
+  font-weight: 600;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px; /* Reduced from 12px */
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px; /* Reduced from 16px */
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  width: 16px; /* Smaller icon */
+  height: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px; /* Reduced padding */
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 13px; /* Reduced from 16px */
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+.search-submit-btn {
+  padding: 0 16px; /* Reduced */
+}
+
+.filter-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduced from 12px */
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Reduced from 6px */
+  font-size: 12px; /* Reduced from 14px */
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tags-container {
+  display: flex;
+  gap: 6px; /* Reduced from 8px */
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  padding: 4px 12px; /* Reduced from 6px 16px */
+  border-radius: 12px; /* Reduced from 20px */
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 11px; /* Reduced from 13px */
+  transition: all var(--transition-fast);
+}
+
+.tag-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.tag-btn.active {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

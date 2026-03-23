@@ -1,0 +1,85 @@
+.about-page {
+  padding-bottom: 32px; /* Reduced from 64px */
+}
+
+.about-hero {
+  height: 40vh; /* Reduced from 50vh */
+  min-height: 240px; /* Reduced from 400px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1615397323062-17182285514f?auto=format&fit=crop&q=80&w=2000');
+  background-size: cover;
+  background-position: center 30%;
+  margin-bottom: 32px; /* Reduced from 64px */
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(250, 248, 248, 0.4);
+}
+
+:root[data-theme='dark'] .about-hero-overlay {
+  background-color: rgba(26, 24, 24, 0.6);
+}
+
+.relative {
+  position: relative;
+  z-index: 10;
+}
+
+.about-title {
+  font-size: 36px; /* Reduced from 56px */
+  color: var(--text-primary);
+  margin-bottom: 12px; /* Reduced from 24px */
+  text-shadow: 0 1px 4px rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+:root[data-theme='dark'] .about-title {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.about-subtitle {
+  display: inline-block;
+  padding: 8px 16px; /* Reduced from 12px 24px */
+  font-size: 14px; /* Reduced from 18px */
+  border-radius: var(--border-radius-sm); /* Standardized */
+  color: var(--text-primary);
+}
+
+.about-content {
+  max-width: 600px; /* Reduced from 800px to keep lines short and readable */
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: 32px; /* Reduced from 48px */
+}
+
+.about-section h2 {
+  font-size: 20px; /* Reduced from 32px */
+  margin-bottom: 8px; /* Reduced from 16px */
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.leading-relaxed {
+  line-height: 1.6; /* Tighter from 1.8 */
+  font-size: 13px; /* Reduced from 16px */
+}
+
+.brand-promise {
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--accent-light);
+  padding: 24px; /* Ensure padding is balanced */
+}
+
+.brand-promise h3 {
+  font-size: 18px; /* Reduced from 28px */
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 4px;
+}

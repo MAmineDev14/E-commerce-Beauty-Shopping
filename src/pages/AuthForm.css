@@ -1,0 +1,60 @@
+.auth-page {
+  padding: 40px 0; /* Reduced from 64px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px - 200px); /* adjusted for new header/footer math */
+}
+
+.auth-card {
+  max-width: 400px; /* Reduced from 480px for a more compact form */
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px; /* Reduced from 48px 40px */
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm); /* Keep it light */
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 24px; /* Reduced from 32px */
+  margin-bottom: 4px; /* Reduced from 8px */
+}
+
+.auth-subtitle {
+  text-align: center;
+  margin-bottom: 24px; 
+  font-size: 14px; /* Refined to 14px */
+}
+
+.auth-form label {
+  font-size: 13px; /* Refined to 13px */
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.forgot-password {
+  font-size: 13px; /* Refined to 13px */
+  transition: color var(--transition-fast);
+}
+
+.forgot-password:hover {
+  color: var(--accent);
+}
+
+.auth-link {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 14px; /* Refined to 14px */
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

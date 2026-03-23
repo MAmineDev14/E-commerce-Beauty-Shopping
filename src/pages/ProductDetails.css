@@ -1,0 +1,194 @@
+.product-details-page {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  transition: all var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--accent);
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .back-link:hover {
+  transform: translateX(4px);
+}
+
+.product-details-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .product-details-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.product-gallery {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--bg-secondary);
+}
+
+.product-gallery .main-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Standardized to 300px */
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.product-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-actions-top {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-title {
+  font-size: 24px; /* Refined to 24px (Amazon Style) */
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .detail-title {
+    font-size: 21px; 
+  }
+}
+
+.detail-meta {
+  margin-bottom: 24px;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-text {
+  font-size: 13px; /* Refined to 13px */
+  color: var(--text-secondary);
+  margin-left: 8px;
+}
+
+[dir="rtl"] .rating-text {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.detail-price {
+  font-size: 21px; /* Refined to 21px */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.detail-description {
+  font-size: 14px; /* Refined to 14px */
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.detail-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+.purchase-area {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .purchase-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+
+.qty-value {
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  height: 48px;
+  font-size: 16px !important; /* Standardized to 16px */
+  font-weight: 600 !important;
+  border-radius: 30px !important;
+}
+
+.add-to-cart-btn.added {
+  background-color: var(--success);
+  border-color: var(--success);
+}
+
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
